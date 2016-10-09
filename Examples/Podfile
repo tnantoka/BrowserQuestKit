@@ -1,0 +1,4 @@
+target 'Examples' do
+  use_frameworks!
+  pod 'BrowserQuestKit', path: '../'
+end

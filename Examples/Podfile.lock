@@ -1,0 +1,16 @@
+PODS:
+  - BrowserQuestKit (0.1.0)
+
+DEPENDENCIES:
+  - BrowserQuestKit (from `../`)
+
+EXTERNAL SOURCES:
+  BrowserQuestKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BrowserQuestKit: fbce04cb9788850618eaed633ef8c9a75781744c
+
+PODFILE CHECKSUM: 0817b9a8025b1c6c4a800da6e9a70b8014d84edd
+
+COCOAPODS: 1.1.0.rc.2
