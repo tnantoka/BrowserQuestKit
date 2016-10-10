@@ -17,8 +17,10 @@ class GameScene: SKScene {
     private var spinnyNode : SKShapeNode?
     
     override func didMove(to view: SKView) {
-        let sprite = Sprite(color: UIColor.green, size: CGSize(width: 50.0, height: 50.0))
+        let sprite = Sprite(name: .clotharmor)
         sprite.position = view.center
         addChild(sprite)
+        
+        sprite.animate(animation: .walkDown)
     }    
 }

@@ -15,11 +15,7 @@ The helper library to use sprites, maps, sounds and musics of BrowserQuest for S
 
   s.source_files = 'BrowserQuestKit/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'BrowserQuestKit' => ['BrowserQuestKit/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.resource_bundles = {
+    'BrowserQuestKit' => ['BrowserQuestKit/Assets/**/*']
+  }
 end
