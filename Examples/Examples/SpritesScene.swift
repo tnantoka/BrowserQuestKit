@@ -31,7 +31,5 @@ class SpritesScene: SKScene {
             }
             sprite.position = position
         }
-        
-        zoom(0.7)
     }
 }

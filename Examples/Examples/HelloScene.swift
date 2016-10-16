@@ -69,8 +69,6 @@ class GameScene: SKScene {
         chest.physicsBody?.isDynamic = false
         
         sprite.zPosition = 1.0
-        
-        zoom(0.7)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

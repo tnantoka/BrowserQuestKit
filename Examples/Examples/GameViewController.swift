@@ -21,12 +21,13 @@ class GameViewController: UIViewController {
             let scene = example.init(size: view.bounds.size)
             scene.scaleMode = .aspectFill
             view.presentScene(scene)
+            scene.zoom(0.75)
             
             view.ignoresSiblingOrder = true
             
             view.showsFPS = true
             view.showsNodeCount = true
-            view.showsPhysics = true
+            // view.showsPhysics = true
         }
     }
 

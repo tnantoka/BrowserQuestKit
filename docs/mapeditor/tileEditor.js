@@ -130,23 +130,26 @@ var tinyMapEditor = (function() {
 
         buildMap : function(e) {
             if (e.target.id === 'build') {
+                this.outputJSON();
+                return;
+
                 var obj = {},
                     pixels,
                     len,
                     x, y, z;
 
-                // tiles = []; // graphical tiles (not currently needed, can be used to create standard tile map)
+                tiles = []; // graphical tiles (not currently needed, can be used to create standard tile map)
                 alpha = []; // collision map
 
                 for (x = 0; x < width; x++) { // tiles across
-                    // tiles[x] = [];
+                    tiles[x] = [];
                     alpha[x] = [];
 
                     for (y = 0; y < height; y++) { // tiles down
                         pixels = map.getImageData(x * tileSize, y * tileSize, tileSize, tileSize);
                         len = pixels.data.length;
 
-                        // tiles[x][y] = pixels; // store ALL tile data
+                        tiles[x][y] = pixels; // store ALL tile data
                         alpha[x][y] = [];
 
                         for (z = 0; z < len; z += 4) {
@@ -162,13 +165,13 @@ var tinyMapEditor = (function() {
                             alpha[x][y] = 0;
                         } else { // partial alpha, build pixel map
                             alpha[x][y] = this.sortPartial(alpha[x][y]);
-                            // tiles[x][y] = pixels; // (temporarily) used for drawing map
+                            tiles[x][y] = pixels; // (temporarily) used for drawing map
                         }
                     }
                 }
 
                 this.outputJSON();
-                // this.drawMap();
+                this.drawMap();
             }
         },
 

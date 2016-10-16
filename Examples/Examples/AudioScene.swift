@@ -22,9 +22,13 @@ class AudioScene: SKScene {
         sprite.animate(.walkDown)
 
         Music.play(.village, forScene: self)
-        
-        physicsBody = SKPhysicsBody.init(edgeLoopFrom: frame)
-        physicsBody?.isDynamic = false
+
+        let ground = SKSpriteNode(color: UIColor.white, size: CGSize(width: size.width, height: 2.0))
+        ground.position.x = view.center.x
+        ground.position.y = view.center.y - 50.0
+        ground.physicsBody = SKPhysicsBody(rectangleOf: ground.size)
+        ground.physicsBody?.isDynamic = false
+        addChild(ground)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
