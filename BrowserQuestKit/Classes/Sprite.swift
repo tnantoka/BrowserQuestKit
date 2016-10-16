@@ -9,7 +9,6 @@
 import UIKit
 import SpriteKit
 
-
 open class Sprite: SKSpriteNode {
     
     typealias Animations = [String: [String: CGFloat]]
@@ -17,6 +16,7 @@ open class Sprite: SKSpriteNode {
         width: CGFloat,
         height: CGFloat,
         animations: Animations,
+        offsetY: CGFloat,
         texture: SKTexture
     )
     
@@ -32,8 +32,16 @@ open class Sprite: SKSpriteNode {
         let width = jsonObject["width"] as! CGFloat
         let height = jsonObject["height"] as! CGFloat
 
-        let animations = jsonObject["animations"] as! Animations
+        var animations = jsonObject["animations"] as! Animations
+        for (name, animation) in animations {
+            if name.hasSuffix("_right") {
+                let left = name.replacingOccurrences(of: "right", with: "left")
+                animations[left] = animation
+            }            
+        }
         
+        let offsetY = jsonObject["offset_y"] as! CGFloat / 4.0
+
         let image = UIImage(named: id, in: bundle, compatibleWith: nil)!
         let texture = SKTexture(image: image)
         
@@ -41,17 +49,24 @@ open class Sprite: SKSpriteNode {
             width: width,
             height: height,
             animations: animations,
+            offsetY: offsetY,
             texture: texture
         )
 
         super.init(texture: nil, color: UIColor.clear, size: CGSize(width: width, height: height))
+
+        self.physicsBody = SKPhysicsBody.init(rectangleOf: CGSize(width: Map.tileSize, height: Map.tileSize))
+        self.physicsBody?.affectedByGravity = false
+        self.physicsBody?.categoryBitMask = BitMask.sprite
+        self.physicsBody?.collisionBitMask = BitMask.sprite | BitMask.map
+        self.physicsBody?.allowsRotation = false
     }
     
     public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func animate(animation: SpriteAnimation) {
+    public func animate(_ animation: SpriteAnimation, speed: AnimationSpeed = .normal, forever: Bool = true) {
         guard let jsonAnimation = json.animations[animation.rawValue],
             let length = jsonAnimation["length"],
             let row = jsonAnimation["row"]
@@ -62,15 +77,21 @@ open class Sprite: SKSpriteNode {
         let textures = stride(from: 0.0, to: length, by: 1.0)
             .map { subTexture(col: $0, row: row) }
         
-        let animate = SKAction.animate(with: textures, timePerFrame: animation.timePerFrame)
-        let forever = SKAction.repeatForever(animate)
+        let animate = SKAction.animate(with: textures, timePerFrame: speed.rawValue)
+        let key = "animate"
+        removeAction(forKey: key)
+        if forever {
+            let forever = SKAction.repeatForever(animate)
+            run(forever, withKey: key)
+        } else {
+            run(animate, withKey: key)
+        }
         
-        removeAllActions()
-        run(forever)
+        xScale = animation.xScale
     }
     
-    private func subTexture(col: CGFloat, row: CGFloat) -> SKTexture {
-        let (width, height, _, texture) = json
+    func subTexture(col: CGFloat, row: CGFloat) -> SKTexture {
+        let (width, height, _, offsetY, texture) = json
 
         let textureSize = texture.size()
         let textureWidth = textureSize.width
@@ -80,7 +101,7 @@ open class Sprite: SKSpriteNode {
         
         let rect = CGRect(
             x: col * width / textureWidth,
-            y: (textureHeight - flippedRow * height) / textureHeight,
+            y: (textureHeight - flippedRow * height + offsetY) / textureHeight,
             width: width / textureWidth,
             height: height / textureHeight
         )

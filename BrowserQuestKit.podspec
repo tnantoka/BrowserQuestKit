@@ -11,7 +11,7 @@ The helper library to use sprites, maps, sounds and musics of BrowserQuest for S
   s.source           = { :git => 'https://github.com/tnantoka/BrowserQuestKit.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/tnantoka'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'BrowserQuestKit/Classes/**/*'
   

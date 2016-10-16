@@ -9,9 +9,18 @@
 import Foundation
 
 public enum SpriteAnimation: String {
+    case walkRight = "walk_right"
+    case walkUp = "walk_up"
     case walkDown = "walk_down"
+    case walkLeft = "walk_left"
+    case idleDown = "idle_down"
     
-    var timePerFrame: TimeInterval {
-        return 0.3
+    var xScale: CGFloat {
+        switch self {
+        case .walkLeft:
+            return -1
+        default:
+            return 1
+        }
     }
 }

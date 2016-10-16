@@ -7,13 +7,18 @@
 //
 
 import Foundation
+import SpriteKit
 
 class Utility {
     static let shared = Utility()
-    
-    var bundle: Bundle {
+        
+    lazy var bundle: Bundle = {
         let bundle = Bundle(for: type(of: self))
         let path = bundle.path(forResource: "BrowserQuestKit", ofType: "bundle")!
         return Bundle(path: path)!
+    }()
+    
+    var screenScale: CGFloat {
+        return UIScreen.main.scale
     }
 }

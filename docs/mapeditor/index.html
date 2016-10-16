@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>2D Tile Map Editor for JavaScript Games</title>
+    <link rel="stylesheet" href="assets/tinyMapEditor.css">
+</head>
+<body>
+
+    <section>
+        <canvas id="tileEditor"></canvas>
+    </section>
+
+    <menu>
+        <ul>
+            <li id="options">
+                <label>Map Options</label>
+                <p><label>Tile size:</label><input type="text" value="32" maxlength="3" disabled /><span>px</span></p>
+                <p><label>Map width:</label><input type="number" value="8" maxlength="3" id="width" /><span>tiles</span></p>
+                <p><label>Map height:</label><input type="number" value="10" maxlength="3" id="height" /><span>tiles</span></p>
+            </li>
+            <li id="tiles">
+                <label>Tiles</label>
+                <div><canvas id="palette"></canvas></div>
+            </li>
+            <li id="selected">
+                <label>Selected Tile</label>
+                <p id="index">-1</p>
+            </li>
+            <li id="tools">
+                <label>Tools</label>
+                <p><input id="erase" type="button" value="Tile Eraser" /></p>
+                <p><input id="build" type="button" value="Build Map" /></p>
+                <p><input id="load" type="button" value="Load Map" /></p>
+                <p><input id="clear" type="button" value="Clear Canvas" /></p>
+                <p>
+                    <input id="invert" type="hidden" />
+                    <a href="https://github.com/tnantoka/tinyMapEditor">tnantoka/tinyMapEditor</a>
+                </p>
+
+            </li>
+        </ul>
+    </menu>
+
+    <output>
+    <textarea></textarea>
+    </output>
+
+    <script src="tileEditor.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+.map {
+  position: relative;
+}
+
+.map img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgb(173, 216, 230);
+}
+
+.map .tile {
+  float: right;
+  display: block;
+  position: relative;
+  z-index: 1;
+  padding: 1px;
+}
+
+.map.grid .tile {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.map .tile .index {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 11px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.map.grid .tile .index,
+.map .tile.grid .index {
+  display: none;
+}
+
+.map.scale1 .tile {
+  width: 16px;
+  height: 16px;
+  line-height: 14px;
+}
+
+.map.scale2 .tile {
+  width: 32px;
+  height: 32px;
+  line-height: 30px;
+}
+
+.map.scale3 .tile {
+  width: 48px;
+  height: 48px;
+  line-height: 46px;
+}
+
+/* Bootstrap */
+.btn {
+  border-radius: 0;
+}

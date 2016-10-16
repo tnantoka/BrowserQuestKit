@@ -10,4 +10,5 @@ import Foundation
 
 public enum SpriteName: String {
     case clotharmor = "clotharmor"
+    case chest = "chest"
 }
