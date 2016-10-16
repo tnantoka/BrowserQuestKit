@@ -319,6 +319,37 @@
 		9BD933EE1DAFB9B90027B87B /* AnimationSpeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD933ED1DAFB9B90027B87B /* AnimationSpeed.swift */; };
 		9BD933F01DAFBA410027B87B /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD933EF1DAFBA410027B87B /* Map.swift */; };
 		9BD933F21DB2FCD40027B87B /* BitMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD933F11DB2FCD40027B87B /* BitMask.swift */; };
+		9BDA56971DB35FC00044143E /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA56961DB35FC00044143E /* arrow.png */; };
+		9BDA56991DB3A8D70044143E /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDA56981DB3A8D70044143E /* Scene.swift */; };
+		9BDA569B1DB3AE8E0044143E /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDA569A1DB3AE8E0044143E /* Sound.swift */; };
+		9BDA569D1DB3AEA50044143E /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDA569C1DB3AEA50044143E /* Music.swift */; };
+		9BDA569F1DB3AF600044143E /* MusicName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDA569E1DB3AF600044143E /* MusicName.swift */; };
+		9BDA56A11DB3AF670044143E /* SoundName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDA56A01DB3AF670044143E /* SoundName.swift */; };
+		9BDA56BD1DB3B2330044143E /* beach.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA56A31DB3B2330044143E /* beach.mp3 */; };
+		9BDA56BE1DB3B2330044143E /* boss.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA56A41DB3B2330044143E /* boss.mp3 */; };
+		9BDA56BF1DB3B2330044143E /* cave.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA56A51DB3B2330044143E /* cave.mp3 */; };
+		9BDA56C01DB3B2330044143E /* desert.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA56A61DB3B2330044143E /* desert.mp3 */; };
+		9BDA56C11DB3B2330044143E /* forest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA56A71DB3B2330044143E /* forest.mp3 */; };
+		9BDA56C21DB3B2330044143E /* lavaland.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA56A81DB3B2330044143E /* lavaland.mp3 */; };
+		9BDA56C31DB3B2330044143E /* village.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA56A91DB3B2330044143E /* village.mp3 */; };
+		9BDA56C41DB3B2330044143E /* achievement.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA56AB1DB3B2330044143E /* achievement.mp3 */; };
+		9BDA56C51DB3B2330044143E /* chat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA56AC1DB3B2330044143E /* chat.mp3 */; };
+		9BDA56C61DB3B2330044143E /* chest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA56AD1DB3B2330044143E /* chest.mp3 */; };
+		9BDA56C71DB3B2330044143E /* death.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA56AE1DB3B2330044143E /* death.mp3 */; };
+		9BDA56C81DB3B2330044143E /* firefox.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA56AF1DB3B2330044143E /* firefox.mp3 */; };
+		9BDA56C91DB3B2330044143E /* heal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA56B01DB3B2330044143E /* heal.mp3 */; };
+		9BDA56CA1DB3B2330044143E /* hit1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA56B11DB3B2330044143E /* hit1.mp3 */; };
+		9BDA56CB1DB3B2330044143E /* hit2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA56B21DB3B2330044143E /* hit2.mp3 */; };
+		9BDA56CC1DB3B2330044143E /* hurt.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA56B31DB3B2330044143E /* hurt.mp3 */; };
+		9BDA56CD1DB3B2330044143E /* kill1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA56B41DB3B2330044143E /* kill1.mp3 */; };
+		9BDA56CE1DB3B2330044143E /* kill2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA56B51DB3B2330044143E /* kill2.mp3 */; };
+		9BDA56CF1DB3B2330044143E /* loot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA56B61DB3B2330044143E /* loot.mp3 */; };
+		9BDA56D01DB3B2330044143E /* noloot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA56B71DB3B2330044143E /* noloot.mp3 */; };
+		9BDA56D11DB3B2330044143E /* npc-end.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA56B81DB3B2330044143E /* npc-end.mp3 */; };
+		9BDA56D21DB3B2330044143E /* npc.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA56B91DB3B2330044143E /* npc.mp3 */; };
+		9BDA56D31DB3B2330044143E /* npctalk.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA56BA1DB3B2330044143E /* npctalk.mp3 */; };
+		9BDA56D41DB3B2330044143E /* revive.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA56BB1DB3B2330044143E /* revive.mp3 */; };
+		9BDA56D51DB3B2330044143E /* teleport.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA56BC1DB3B2330044143E /* teleport.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -647,6 +678,37 @@
 		9BD933ED1DAFB9B90027B87B /* AnimationSpeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationSpeed.swift; sourceTree = "<group>"; };
 		9BD933EF1DAFBA410027B87B /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		9BD933F11DB2FCD40027B87B /* BitMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitMask.swift; sourceTree = "<group>"; };
+		9BDA56961DB35FC00044143E /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		9BDA56981DB3A8D70044143E /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		9BDA569A1DB3AE8E0044143E /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		9BDA569C1DB3AEA50044143E /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		9BDA569E1DB3AF600044143E /* MusicName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicName.swift; sourceTree = "<group>"; };
+		9BDA56A01DB3AF670044143E /* SoundName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundName.swift; sourceTree = "<group>"; };
+		9BDA56A31DB3B2330044143E /* beach.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beach.mp3; sourceTree = "<group>"; };
+		9BDA56A41DB3B2330044143E /* boss.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = boss.mp3; sourceTree = "<group>"; };
+		9BDA56A51DB3B2330044143E /* cave.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cave.mp3; sourceTree = "<group>"; };
+		9BDA56A61DB3B2330044143E /* desert.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = desert.mp3; sourceTree = "<group>"; };
+		9BDA56A71DB3B2330044143E /* forest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = forest.mp3; sourceTree = "<group>"; };
+		9BDA56A81DB3B2330044143E /* lavaland.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lavaland.mp3; sourceTree = "<group>"; };
+		9BDA56A91DB3B2330044143E /* village.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = village.mp3; sourceTree = "<group>"; };
+		9BDA56AB1DB3B2330044143E /* achievement.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = achievement.mp3; sourceTree = "<group>"; };
+		9BDA56AC1DB3B2330044143E /* chat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chat.mp3; sourceTree = "<group>"; };
+		9BDA56AD1DB3B2330044143E /* chest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chest.mp3; sourceTree = "<group>"; };
+		9BDA56AE1DB3B2330044143E /* death.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = death.mp3; sourceTree = "<group>"; };
+		9BDA56AF1DB3B2330044143E /* firefox.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = firefox.mp3; sourceTree = "<group>"; };
+		9BDA56B01DB3B2330044143E /* heal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = heal.mp3; sourceTree = "<group>"; };
+		9BDA56B11DB3B2330044143E /* hit1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hit1.mp3; sourceTree = "<group>"; };
+		9BDA56B21DB3B2330044143E /* hit2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hit2.mp3; sourceTree = "<group>"; };
+		9BDA56B31DB3B2330044143E /* hurt.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hurt.mp3; sourceTree = "<group>"; };
+		9BDA56B41DB3B2330044143E /* kill1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kill1.mp3; sourceTree = "<group>"; };
+		9BDA56B51DB3B2330044143E /* kill2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kill2.mp3; sourceTree = "<group>"; };
+		9BDA56B61DB3B2330044143E /* loot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = loot.mp3; sourceTree = "<group>"; };
+		9BDA56B71DB3B2330044143E /* noloot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = noloot.mp3; sourceTree = "<group>"; };
+		9BDA56B81DB3B2330044143E /* npc-end.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "npc-end.mp3"; sourceTree = "<group>"; };
+		9BDA56B91DB3B2330044143E /* npc.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = npc.mp3; sourceTree = "<group>"; };
+		9BDA56BA1DB3B2330044143E /* npctalk.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = npctalk.mp3; sourceTree = "<group>"; };
+		9BDA56BB1DB3B2330044143E /* revive.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = revive.mp3; sourceTree = "<group>"; };
+		9BDA56BC1DB3B2330044143E /* teleport.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = teleport.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -716,6 +778,11 @@
 				9BD933EF1DAFBA410027B87B /* Map.swift */,
 				9BD933E91DABBF270027B87B /* Utility.swift */,
 				9BD933F11DB2FCD40027B87B /* BitMask.swift */,
+				9BDA56981DB3A8D70044143E /* Scene.swift */,
+				9BDA569A1DB3AE8E0044143E /* Sound.swift */,
+				9BDA569C1DB3AEA50044143E /* Music.swift */,
+				9BDA569E1DB3AF600044143E /* MusicName.swift */,
+				9BDA56A01DB3AF670044143E /* SoundName.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -725,6 +792,8 @@
 			children = (
 				9BD931891DAA969F0027B87B /* json */,
 				9BD932181DAA99100027B87B /* img */,
+				9BDA56A21DB3B2330044143E /* music */,
+				9BDA56AA1DB3B2330044143E /* sounds */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -810,6 +879,7 @@
 		9BD932181DAA99100027B87B /* img */ = {
 			isa = PBXGroup;
 			children = (
+				9BDA56961DB35FC00044143E /* arrow.png */,
 				9BD932191DAA99100027B87B /* achievements.png */,
 				9BD9321A1DAA99100027B87B /* achievements@2x.png */,
 				9BD9321B1DAA99100027B87B /* achievements@3x.png */,
@@ -1045,6 +1115,45 @@
 			path = img;
 			sourceTree = "<group>";
 		};
+		9BDA56A21DB3B2330044143E /* music */ = {
+			isa = PBXGroup;
+			children = (
+				9BDA56A31DB3B2330044143E /* beach.mp3 */,
+				9BDA56A41DB3B2330044143E /* boss.mp3 */,
+				9BDA56A51DB3B2330044143E /* cave.mp3 */,
+				9BDA56A61DB3B2330044143E /* desert.mp3 */,
+				9BDA56A71DB3B2330044143E /* forest.mp3 */,
+				9BDA56A81DB3B2330044143E /* lavaland.mp3 */,
+				9BDA56A91DB3B2330044143E /* village.mp3 */,
+			);
+			path = music;
+			sourceTree = "<group>";
+		};
+		9BDA56AA1DB3B2330044143E /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				9BDA56AB1DB3B2330044143E /* achievement.mp3 */,
+				9BDA56AC1DB3B2330044143E /* chat.mp3 */,
+				9BDA56AD1DB3B2330044143E /* chest.mp3 */,
+				9BDA56AE1DB3B2330044143E /* death.mp3 */,
+				9BDA56AF1DB3B2330044143E /* firefox.mp3 */,
+				9BDA56B01DB3B2330044143E /* heal.mp3 */,
+				9BDA56B11DB3B2330044143E /* hit1.mp3 */,
+				9BDA56B21DB3B2330044143E /* hit2.mp3 */,
+				9BDA56B31DB3B2330044143E /* hurt.mp3 */,
+				9BDA56B41DB3B2330044143E /* kill1.mp3 */,
+				9BDA56B51DB3B2330044143E /* kill2.mp3 */,
+				9BDA56B61DB3B2330044143E /* loot.mp3 */,
+				9BDA56B71DB3B2330044143E /* noloot.mp3 */,
+				9BDA56B81DB3B2330044143E /* npc-end.mp3 */,
+				9BDA56B91DB3B2330044143E /* npc.mp3 */,
+				9BDA56BA1DB3B2330044143E /* npctalk.mp3 */,
+				9BDA56BB1DB3B2330044143E /* revive.mp3 */,
+				9BDA56BC1DB3B2330044143E /* teleport.mp3 */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1142,7 +1251,9 @@
 				9BD9335E1DAA99100027B87B /* item-goldenarmor@2x.png in Resources */,
 				9BD933D01DAA99100027B87B /* target@2x.png in Resources */,
 				9BD933C71DAA99100027B87B /* sword2.png in Resources */,
+				9BDA56D41DB3B2330044143E /* revive.mp3 in Resources */,
 				9BD933AD1DAA99100027B87B /* shadow16@3x.png in Resources */,
+				9BDA56C91DB3B2330044143E /* heal.mp3 in Resources */,
 				9BD933C51DAA99100027B87B /* sword1@2x.png in Resources */,
 				9BD933941DAA99100027B87B /* ogre@2x.png in Resources */,
 				9BD931FE1DAA969F0027B87B /* morningstar.json in Resources */,
@@ -1150,6 +1261,7 @@
 				9BD933A91DAA99100027B87B /* scientist@2x.png in Resources */,
 				9BD933751DAA99100027B87B /* item-sword1.png in Resources */,
 				9BD933861DAA99100027B87B /* loot@3x.png in Resources */,
+				9BDA56BF1DB3B2330044143E /* cave.mp3 in Resources */,
 				9BD9330E1DAA99100027B87B /* bat@3x.png in Resources */,
 				9BD933341DAA99100027B87B /* firefox@2x.png in Resources */,
 				9BD933201DAA99100027B87B /* clotharmor@3x.png in Resources */,
@@ -1163,11 +1275,13 @@
 				9BD9331D1DAA99100027B87B /* chest@3x.png in Resources */,
 				9BD933E31DAA99100027B87B /* wood3@2x.png in Resources */,
 				9BD933911DAA99100027B87B /* octocat@2x.png in Resources */,
+				9BDA56CF1DB3B2330044143E /* loot.mp3 in Resources */,
 				9BD9330D1DAA99100027B87B /* bat@2x.png in Resources */,
 				9BD931D11DAA969F0027B87B /* agent.json in Resources */,
 				9BD933A21DAA99100027B87B /* redsword.png in Resources */,
 				9BD931F01DAA969F0027B87B /* item-goldensword.json in Resources */,
 				9BD931ED1DAA969F0027B87B /* item-firepotion.json in Resources */,
+				9BDA56C41DB3B2330044143E /* achievement.mp3 in Resources */,
 				9BD9333C1DAA99100027B87B /* goldenarmor.png in Resources */,
 				9BD931F91DAA969F0027B87B /* king.json in Resources */,
 				9BD9332D1DAA99100027B87B /* desertnpc.png in Resources */,
@@ -1176,6 +1290,7 @@
 				9BD932161DAA969F0027B87B /* villager.json in Resources */,
 				9BD933D71DAA99100027B87B /* villagegirl@3x.png in Resources */,
 				9BD933B01DAA99100027B87B /* skeleton2@2x.png in Resources */,
+				9BDA56D01DB3B2330044143E /* noloot.mp3 in Resources */,
 				9BD933B51DAA99100027B87B /* snake@2x.png in Resources */,
 				9BD9334D1DAA99100027B87B /* item-bluesword@3x.png in Resources */,
 				9BD931EA1DAA969F0027B87B /* item-burger.json in Resources */,
@@ -1209,8 +1324,10 @@
 				9BD9333D1DAA99100027B87B /* goldenarmor@2x.png in Resources */,
 				9BD933E61DAA99100027B87B /* wood@3x.png in Resources */,
 				9BD933221DAA99100027B87B /* coder@2x.png in Resources */,
+				9BDA56C31DB3B2330044143E /* village.mp3 in Resources */,
 				9BD933AE1DAA99100027B87B /* skeleton.png in Resources */,
 				9BD933DB1DAA99100027B87B /* wizard.png in Resources */,
+				9BDA56D21DB3B2330044143E /* npc.mp3 in Resources */,
 				9BD9337A1DAA99100027B87B /* item-sword2@3x.png in Resources */,
 				9BD9335F1DAA99100027B87B /* item-goldenarmor@3x.png in Resources */,
 				9BD933761DAA99100027B87B /* item-sword1@2x.png in Resources */,
@@ -1224,8 +1341,10 @@
 				9BD931D21DAA969F0027B87B /* arrow.json in Resources */,
 				9BD9330A1DAA99100027B87B /* barsheet@2x.png in Resources */,
 				9BD9337C1DAA99100027B87B /* king@2x.png in Resources */,
+				9BDA56CC1DB3B2330044143E /* hurt.mp3 in Resources */,
 				9BD933B31DAA99100027B87B /* skeleton@3x.png in Resources */,
 				9BD931D31DAA969F0027B87B /* axe.json in Resources */,
+				9BDA56CA1DB3B2330044143E /* hit1.mp3 in Resources */,
 				9BD931EF1DAA969F0027B87B /* item-goldenarmor.json in Resources */,
 				9BD933491DAA99100027B87B /* item-axe@2x.png in Resources */,
 				9BD931E21DAA969F0027B87B /* goblin.json in Resources */,
@@ -1235,6 +1354,7 @@
 				9BD933A01DAA99100027B87B /* redarmor@2x.png in Resources */,
 				9BD933881DAA99100027B87B /* mailarmor@2x.png in Resources */,
 				9BD933A31DAA99100027B87B /* redsword@2x.png in Resources */,
+				9BDA56CB1DB3B2330044143E /* hit2.mp3 in Resources */,
 				9BD933BA1DAA99100027B87B /* sparks.png in Resources */,
 				9BD933D41DAA99100027B87B /* tilesheet@3x.png in Resources */,
 				9BD933611DAA99100027B87B /* item-goldensword@2x.png in Resources */,
@@ -1245,12 +1365,14 @@
 				9BD9339B1DAA99100027B87B /* priest@3x.png in Resources */,
 				9BD933871DAA99100027B87B /* mailarmor.png in Resources */,
 				9BD933971DAA99100027B87B /* platearmor@2x.png in Resources */,
+				9BDA56BD1DB3B2330044143E /* beach.mp3 in Resources */,
 				9BD933961DAA99100027B87B /* platearmor.png in Resources */,
 				9BD9338B1DAA99100027B87B /* morningstar@2x.png in Resources */,
 				9BD932151DAA969F0027B87B /* villagegirl.json in Resources */,
 				9BD931E41DAA969F0027B87B /* goldensword.json in Resources */,
 				9BD933731DAA99100027B87B /* item-redsword@2x.png in Resources */,
 				9BD931E11DAA969F0027B87B /* forestnpc.json in Resources */,
+				9BDA56D11DB3B2330044143E /* npc-end.mp3 in Resources */,
 				9BD931FA1DAA969F0027B87B /* lavanpc.json in Resources */,
 				9BD9336A1DAA99100027B87B /* item-morningstar@2x.png in Resources */,
 				9BD933801DAA99100027B87B /* lavanpc@3x.png in Resources */,
@@ -1265,6 +1387,7 @@
 				9BD933321DAA99100027B87B /* eye@3x.png in Resources */,
 				9BD933A61DAA99100027B87B /* rick@2x.png in Resources */,
 				9BD933681DAA99100027B87B /* item-mailarmor@3x.png in Resources */,
+				9BDA56C81DB3B2330044143E /* firefox.mp3 in Resources */,
 				9BD9320B1DAA969F0027B87B /* skeleton2.json in Resources */,
 				9BD932021DAA969F0027B87B /* platearmor.json in Resources */,
 				9BD933661DAA99100027B87B /* item-mailarmor.png in Resources */,
@@ -1277,6 +1400,7 @@
 				9BD9335C1DAA99100027B87B /* item-flask@3x.png in Resources */,
 				9BD931EB1DAA969F0027B87B /* item-cake.json in Resources */,
 				9BD933B41DAA99100027B87B /* snake.png in Resources */,
+				9BDA56C01DB3B2330044143E /* desert.mp3 in Resources */,
 				9BD932061DAA969F0027B87B /* redsword.json in Resources */,
 				9BD933951DAA99100027B87B /* ogre@3x.png in Resources */,
 				9BD933391DAA99100027B87B /* goblin.png in Resources */,
@@ -1297,6 +1421,7 @@
 				9BD933CC1DAA99100027B87B /* talk.png in Resources */,
 				9BD9334F1DAA99100027B87B /* item-burger@2x.png in Resources */,
 				9BD933381DAA99100027B87B /* forestnpc@3x.png in Resources */,
+				9BDA56C71DB3B2330044143E /* death.mp3 in Resources */,
 				9BD933651DAA99100027B87B /* item-leatherarmor@3x.png in Resources */,
 				9BD931F41DAA969F0027B87B /* item-platearmor.json in Resources */,
 				9BD933271DAA99100027B87B /* death.png in Resources */,
@@ -1314,6 +1439,7 @@
 				9BD933301DAA99100027B87B /* eye.png in Resources */,
 				9BD9334B1DAA99100027B87B /* item-bluesword.png in Resources */,
 				9BD933E21DAA99100027B87B /* wood3.png in Resources */,
+				9BDA56BE1DB3B2330044143E /* boss.mp3 in Resources */,
 				9BD9320F1DAA969F0027B87B /* spectre.json in Resources */,
 				9BD933981DAA99100027B87B /* platearmor@3x.png in Resources */,
 				9BD933051DAA99100027B87B /* agent@3x.png in Resources */,
@@ -1338,6 +1464,7 @@
 				9BD9331E1DAA99100027B87B /* clotharmor.png in Resources */,
 				9BD931E71DAA969F0027B87B /* impact.json in Resources */,
 				9BD933171DAA99100027B87B /* border@3x.png in Resources */,
+				9BDA56C21DB3B2330044143E /* lavaland.mp3 in Resources */,
 				9BD9320D1DAA969F0027B87B /* sorcerer.json in Resources */,
 				9BD933031DAA99100027B87B /* agent.png in Resources */,
 				9BD933711DAA99100027B87B /* item-redarmor@3x.png in Resources */,
@@ -1362,6 +1489,7 @@
 				9BD931E81DAA969F0027B87B /* item-axe.json in Resources */,
 				9BD9320E1DAA969F0027B87B /* sparks.json in Resources */,
 				9BD9334C1DAA99100027B87B /* item-bluesword@2x.png in Resources */,
+				9BDA56C51DB3B2330044143E /* chat.mp3 in Resources */,
 				9BD933891DAA99100027B87B /* mailarmor@3x.png in Resources */,
 				9BD933D61DAA99100027B87B /* villagegirl@2x.png in Resources */,
 				9BD933671DAA99100027B87B /* item-mailarmor@2x.png in Resources */,
@@ -1401,6 +1529,7 @@
 				9BD9333A1DAA99100027B87B /* goblin@2x.png in Resources */,
 				9BD9335A1DAA99100027B87B /* item-flask.png in Resources */,
 				9BD933571DAA99100027B87B /* item-firepotion.png in Resources */,
+				9BDA56D51DB3B2330044143E /* teleport.mp3 in Resources */,
 				9BD933411DAA99100027B87B /* goldensword@3x.png in Resources */,
 				9BD933DC1DAA99100027B87B /* wizard@2x.png in Resources */,
 				9BD931EC1DAA969F0027B87B /* item-clotharmor.json in Resources */,
@@ -1413,12 +1542,17 @@
 				9BD933451DAA99100027B87B /* hand.png in Resources */,
 				9BD933DF1DAA99100027B87B /* wood2.png in Resources */,
 				9BD931D61DAA969F0027B87B /* bluesword.json in Resources */,
+				9BDA56971DB35FC00044143E /* arrow.png in Resources */,
+				9BDA56C11DB3B2330044143E /* forest.mp3 in Resources */,
 				9BD933B91DAA99100027B87B /* sorcerer@3x.png in Resources */,
+				9BDA56C61DB3B2330044143E /* chest.mp3 in Resources */,
+				9BDA56CD1DB3B2330044143E /* kill1.mp3 in Resources */,
 				9BD931E31DAA969F0027B87B /* goldenarmor.json in Resources */,
 				9BD9339E1DAA99100027B87B /* rat@3x.png in Resources */,
 				9BD933831DAA99100027B87B /* leatherarmor@3x.png in Resources */,
 				9BD9336D1DAA99100027B87B /* item-platearmor@2x.png in Resources */,
 				9BD933061DAA99100027B87B /* axe.png in Resources */,
+				9BDA56CE1DB3B2330044143E /* kill2.mp3 in Resources */,
 				9BD933D21DAA99100027B87B /* tilesheet.png in Resources */,
 				9BD931F61DAA969F0027B87B /* item-redsword.json in Resources */,
 				9BD933C21DAA99100027B87B /* spritesheet@3x.png in Resources */,
@@ -1426,6 +1560,7 @@
 				9BD932031DAA969F0027B87B /* priest.json in Resources */,
 				9BD933161DAA99100027B87B /* border@2x.png in Resources */,
 				9BD9336C1DAA99100027B87B /* item-platearmor.png in Resources */,
+				9BDA56D31DB3B2330044143E /* npctalk.mp3 in Resources */,
 				9BD933071DAA99100027B87B /* axe@2x.png in Resources */,
 				9BD933471DAA99100027B87B /* hand@3x.png in Resources */,
 				9BD932071DAA969F0027B87B /* rick.json in Resources */,
@@ -1462,8 +1597,13 @@
 				9BD9310D1DA9B4C90027B87B /* Sprite.swift in Sources */,
 				9BD933E81DABB3880027B87B /* SpriteName.swift in Sources */,
 				9BD933EA1DABBF270027B87B /* Utility.swift in Sources */,
+				9BDA56A11DB3AF670044143E /* SoundName.swift in Sources */,
+				9BDA56991DB3A8D70044143E /* Scene.swift in Sources */,
 				9BD933F01DAFBA410027B87B /* Map.swift in Sources */,
 				9BD933F21DB2FCD40027B87B /* BitMask.swift in Sources */,
+				9BDA569F1DB3AF600044143E /* MusicName.swift in Sources */,
+				9BDA569D1DB3AEA50044143E /* Music.swift in Sources */,
+				9BDA569B1DB3AE8E0044143E /* Sound.swift in Sources */,
 				9BD933EC1DABCCC10027B87B /* SpriteAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

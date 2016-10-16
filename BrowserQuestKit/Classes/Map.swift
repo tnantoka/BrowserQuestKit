@@ -10,7 +10,8 @@ import Foundation
 import SpriteKit
 
 open class Map: SKNode {
-    static let tileSize: CGFloat = 16.0
+    public static let tileSize: CGFloat = 16.0
+
     static let image = UIImage(named: "tilesheet", in: Utility.shared.bundle, compatibleWith: nil)!
     static let texture = SKTexture(image: image)
     

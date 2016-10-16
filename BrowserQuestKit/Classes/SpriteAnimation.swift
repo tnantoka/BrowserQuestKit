@@ -15,6 +15,8 @@ public enum SpriteAnimation: String {
     case walkLeft = "walk_left"
     case idleDown = "idle_down"
     
+    case first = "first"
+    
     var xScale: CGFloat {
         switch self {
         case .walkLeft:

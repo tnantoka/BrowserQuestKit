@@ -17,8 +17,7 @@ class GameScene: SKScene {
     private var map: Map!
     
     override func didMove(to view: SKView) {
-        sprite = Sprite(name: .clotharmor)
-        sprite.position = view.center
+        sprite = Sprite(.clotharmor)
         addChild(sprite)
         sprite.animate(.walkDown)
 
@@ -63,11 +62,15 @@ class GameScene: SKScene {
         let position = map.centerOfTile(atColumn: 2, row: 2)
         sprite.position = position
         
-        let chest = Sprite(name: .chest)
+        let chest = Sprite(.chest)
         addChild(chest)
         chest.animate(.idleDown)
         chest.position = map.centerOfTile(atColumn: 5, row: 7)
         chest.physicsBody?.isDynamic = false
+        
+        sprite.zPosition = 1.0
+        
+        zoom(0.7)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
