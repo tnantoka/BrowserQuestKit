@@ -4,7 +4,6 @@ $(function() {
     var $img = $(this).find('img');
 
     var scale = parseInt($img.prop('src').replace(/[^\d]/g, '')) || 1;
-    console.log(scale);
     var tileSize = 16 * scale;
     $map.addClass('scale' + scale);
 
