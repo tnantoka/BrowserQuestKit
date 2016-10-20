@@ -13,7 +13,7 @@ import BrowserQuestKit
 
 class SpritesScene: SKScene {
     override func didMove(to view: SKView) {
-        backgroundColor = UIColor.lightGray
+        backgroundColor = SKColor.lightGray
         
         let cols = 8
         let height: CGFloat = 48.0

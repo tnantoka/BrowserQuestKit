@@ -24,6 +24,10 @@ class ExamplesTableViewController: UITableViewController {
             "label": "Audio",
             "scene": AudioScene.self,
             ],
+        [
+            "label": "Fonts",
+            "scene": FontsScene.self,
+            ],
         ]
     
     override func viewDidLoad() {
