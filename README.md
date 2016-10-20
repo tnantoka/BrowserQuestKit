@@ -37,8 +37,8 @@ class ReadmeScene: SKScene {
 ## Examples
 
 ```
-$ cd Examples
 $ bundle
+$ cd Examples
 $ bundle exec pod install
 $ open Examples.xcworkspace
 ```
