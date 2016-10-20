@@ -28,6 +28,10 @@ class ExamplesTableViewController: UITableViewController {
             "label": "Fonts",
             "scene": FontsScene.self,
             ],
+        [
+            "label": "Getting Started",
+            "scene": ReadmeScene.self,
+            ],
         ]
     
     override func viewDidLoad() {

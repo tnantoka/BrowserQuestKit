@@ -21,7 +21,7 @@ class GameViewController: UIViewController {
             let scene = example.init(size: view.bounds.size)
             scene.scaleMode = .aspectFill
             view.presentScene(scene)
-            scene.zoom(0.75)
+            scene.zoom(0.5)
             
             view.ignoresSiblingOrder = true
             
