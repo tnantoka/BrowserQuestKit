@@ -6,6 +6,10 @@
   position: absolute;
   left: 0;
   top: 0;
+}
+
+.sprites img,
+.map img {
   background: rgb(173, 216, 230);
 }
 
