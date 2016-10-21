@@ -101,7 +101,17 @@ open class Map: SKNode {
         let center = layerNodes[0].centerOfTile(atColumn: column, row: row)
         return layerNodes[0].convert(center, to: parent!)
     }
-    
+
+    public func frameOfTile(atColumn column: Int, row: Int) -> CGRect {
+        let center = centerOfTile(atColumn: column, row: row)
+        return CGRect(
+            x: center.x - Map.tileSize / 2.0,
+            y: center.y - Map.tileSize / 2.0,
+            width: Map.tileSize,
+            height: Map.tileSize
+        )
+    }
+
     public func tileIndex(fromPosition position: CGPoint) -> (column: Int, row: Int) {
         let converted = convert(position, from: parent!)
         let column = layerNodes[0].tileColumnIndex(fromPosition: converted)

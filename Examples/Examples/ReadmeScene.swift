@@ -12,9 +12,13 @@ import BrowserQuestKit
 
 class ReadmeScene: SKScene {
     override func didMove(to view: SKView) {
+        backgroundColor = SKColor.lightGray
+
         let sprite = Sprite(.clotharmor)
         sprite.position = view.center
         sprite.animate(.walkRight)
         addChild(sprite)
+        
+        zoom(0.5)
     }
 }

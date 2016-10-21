@@ -20,8 +20,8 @@ class GameViewController: UIViewController {
         if let view = self.view as! SKView? {
             let scene = example.init(size: view.bounds.size)
             scene.scaleMode = .aspectFill
+            scene.zoom(0.75)
             view.presentScene(scene)
-            scene.zoom(0.5)
             
             view.ignoresSiblingOrder = true
             

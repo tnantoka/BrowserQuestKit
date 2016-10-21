@@ -9,7 +9,7 @@
 import UIKit
 import SpriteKit
 
-open class Sprite: SKSpriteNode {
+open class Sprite: SKNode {
     
     typealias Animations = [String: [String: CGFloat]]
     typealias JSON = (
@@ -22,7 +22,10 @@ open class Sprite: SKSpriteNode {
     
     let json: JSON
     
-    public init(_ name: SpriteName) {
+    let spriteNode: SKSpriteNode
+    let shadow: Sprite?
+    
+    public init(_ name: SpriteName, withShadow: Bool, physics: Bool) {
         let bundle = Utility.shared.bundle
         
         let data = try! Data(contentsOf: bundle.url(forResource: name.rawValue, withExtension: "json")!)
@@ -48,7 +51,6 @@ open class Sprite: SKSpriteNode {
 
         let offsetY = (jsonObject["offset_y"] as? CGFloat ?? 0.0) / 4.0
 
-        print("id = ", id)
         let image = UIImage(named: id, in: bundle, compatibleWith: nil)!
         let texture = SKTexture(image: image)
         
@@ -60,15 +62,43 @@ open class Sprite: SKSpriteNode {
             texture: texture
         )
 
-        super.init(texture: nil, color: UIColor.clear, size: CGSize(width: width, height: height))
+        spriteNode = SKSpriteNode(texture: nil, color: UIColor.clear, size: CGSize(width: width, height: height))
 
-        physicsBody = SKPhysicsBody.init(rectangleOf: CGSize(width: Map.tileSize, height: Map.tileSize))
-        physicsBody?.affectedByGravity = false
-        physicsBody?.categoryBitMask = BitMask.sprite
-        physicsBody?.collisionBitMask = BitMask.sprite | BitMask.map
-        physicsBody?.allowsRotation = false        
+        if withShadow {
+            shadow = Sprite(.shadow16, withShadow: false, physics: false)
+            shadow?.animate(.first)
+        } else {
+            shadow = nil
+        }
+
+        super.init()
+
+        if physics {
+            physicsBody = SKPhysicsBody.init(rectangleOf: CGSize(width: Map.tileSize, height: Map.tileSize))
+            physicsBody?.affectedByGravity = false
+            physicsBody?.categoryBitMask = BitMask.sprite
+            physicsBody?.collisionBitMask = BitMask.sprite | BitMask.map
+            physicsBody?.allowsRotation = false
+        }
+
+        if let shadow = shadow {
+            addChild(shadow)
+        }
+        addChild(spriteNode)
     }
-    
+
+    public convenience init(_ name: SpriteName, withPhysics: Bool) {
+        self.init(name, withShadow: true, physics: withPhysics)
+    }
+
+    public convenience init(_ name: SpriteName, withShadow: Bool) {
+        self.init(name, withShadow: withShadow, physics: true)
+    }
+
+    public convenience init(_ name: SpriteName) {
+        self.init(name, withShadow: true, physics: true)
+    }
+
     public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -93,12 +123,12 @@ open class Sprite: SKSpriteNode {
         removeAction(forKey: key)
         if forever {
             let forever = SKAction.repeatForever(animate)
-            run(forever, withKey: key)
+            spriteNode.run(forever, withKey: key)
         } else {
-            run(animate, withKey: key)
+            spriteNode.run(animate, withKey: key)
         }
         
-        xScale = animation.xScale
+        spriteNode.xScale = animation.xScale
     }
     
     func subTexture(col: CGFloat, row: CGFloat) -> SKTexture {

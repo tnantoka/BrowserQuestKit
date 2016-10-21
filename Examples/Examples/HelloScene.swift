@@ -75,17 +75,18 @@ class GameScene: SKScene {
         guard let touch = touches.first else { return }
         let location = touch.location(in: self)
         var index = map.tileIndex(fromPosition: sprite.position)
+        let frame = map.frameOfTile(atColumn: index.column, row: index.row)
         
-        if location.x > sprite.frame.maxX {
+        if location.x > frame.maxX {
             index.column += 1
             sprite.animate(.walkRight)
-        } else if location.x < sprite.frame.minX {
+        } else if location.x < frame.minX {
             index.column -= 1
             sprite.animate(.walkLeft)
-        } else if location.y > sprite.frame.maxY {
+        } else if location.y > frame.maxY {
             index.row += 1
             sprite.animate(.walkUp)
-        } else if location.y < sprite.frame.minY {
+        } else if location.y < frame.minY {
             index.row -= 1
             sprite.animate(.walkDown)
         }
