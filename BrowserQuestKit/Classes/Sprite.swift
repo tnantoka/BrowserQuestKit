@@ -24,8 +24,9 @@ open class Sprite: SKNode {
     
     let spriteNode: SKSpriteNode
     let shadow: Sprite?
+    let sparks: Sprite?
     
-    public init(_ name: SpriteName, withShadow: Bool, physics: Bool) {
+    public init(_ name: SpriteName, withShadow: Bool, physics: Bool, spark: Bool) {
         let bundle = Utility.shared.bundle
         
         let data = try! Data(contentsOf: bundle.url(forResource: name.rawValue, withExtension: "json")!)
@@ -65,10 +66,17 @@ open class Sprite: SKNode {
         spriteNode = SKSpriteNode(texture: nil, color: UIColor.clear, size: CGSize(width: width, height: height))
 
         if withShadow {
-            shadow = Sprite(.shadow16, withShadow: false, physics: false)
+            shadow = Sprite(.shadow16, withShadow: false, physics: false, spark: false)
             shadow?.animate(.first)
         } else {
             shadow = nil
+        }
+
+        if spark {
+            sparks = Sprite(.sparks, withShadow: false, physics: false, spark: false)
+            sparks?.animate(.first)
+        } else {
+            sparks = nil
         }
 
         super.init()
@@ -85,18 +93,25 @@ open class Sprite: SKNode {
             addChild(shadow)
         }
         addChild(spriteNode)
+        if let sparks = sparks {
+            addChild(sparks)
+        }
     }
 
     public convenience init(_ name: SpriteName, withPhysics: Bool) {
-        self.init(name, withShadow: true, physics: withPhysics)
+        self.init(name, withShadow: true, physics: withPhysics, spark: false)
     }
 
     public convenience init(_ name: SpriteName, withShadow: Bool) {
-        self.init(name, withShadow: withShadow, physics: true)
+        self.init(name, withShadow: withShadow, physics: true, spark: false)
+    }
+
+    public convenience init(_ name: SpriteName, withSpark: Bool) {
+        self.init(name, withShadow: true, physics: true, spark: withSpark)
     }
 
     public convenience init(_ name: SpriteName) {
-        self.init(name, withShadow: true, physics: true)
+        self.init(name, withShadow: true, physics: true, spark: false)
     }
 
     public required init?(coder aDecoder: NSCoder) {

@@ -67,7 +67,13 @@ class GameScene: SKScene {
         chest.animate(.idleDown)
         chest.position = map.centerOfTile(atColumn: 5, row: 7)
         chest.physicsBody?.isDynamic = false
-        
+
+        let sword = Sprite(.itemSword1, withShadow: true, physics: true, spark: true)
+        addChild(sword)
+        sword.animate(.idle)
+        sword.position = map.centerOfTile(atColumn: 2, row: 7)
+        sword.physicsBody?.isDynamic = false
+
         sprite.zPosition = 1.0
     }
     

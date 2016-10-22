@@ -14,6 +14,7 @@ public enum SpriteAnimation: String {
     case walkDown = "walk_down"
     case walkLeft = "walk_left"
     case idleDown = "idle_down"
+    case idle = "idle"
     
     case first = "first"
     

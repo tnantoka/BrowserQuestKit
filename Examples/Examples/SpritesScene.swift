@@ -20,7 +20,7 @@ class SpritesScene: SKScene {
         let x = view.center.x - Map.tileSize * CGFloat(cols / 2)
         var position = CGPoint(x: x, y: view.center.y - height * 5.5)
         for (i, name) in SpriteName.all.enumerated() {
-            let sprite = Sprite(name, withShadow: false, physics: false)
+            let sprite = Sprite(name, withShadow: false, physics: false, spark: false)
             addChild(sprite)
             sprite.canAnimate(.idleDown) ? sprite.animate(.idleDown) : sprite.animate(.first)
             sprite.physicsBody?.isDynamic = false
