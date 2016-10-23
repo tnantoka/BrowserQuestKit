@@ -23,10 +23,26 @@ open class Sprite: SKNode {
     let json: JSON
     
     let spriteNode: SKSpriteNode
-    let shadow: Sprite?
-    let sparks: Sprite?
+
+    let shadowSprite: Sprite?
+    let sparksSprite: Sprite?
     
-    public init(_ name: SpriteName, withShadow: Bool, physics: Bool, spark: Bool) {
+    var weaponSprite: Sprite?
+    public var weapon: SpriteName? {
+        didSet {
+            self.weaponSprite?.removeFromParent()
+            guard let weapon = weapon else { return }
+            let weaponSprite = Sprite(weapon, shadow: false, physics: false)
+            weaponSprite.zPosition = 2
+            addChild(weaponSprite)
+            weaponSprite.animate(weaponSprite.canAnimate(animation) ? animation : .first)
+            self.weaponSprite = weaponSprite
+        }
+    }
+    
+    var animation = SpriteAnimation.first
+    
+    public init(_ name: SpriteName, shadow: Bool = true, physics: Bool = true, sparks: Bool = false) {
         let bundle = Utility.shared.bundle
         
         let data = try! Data(contentsOf: bundle.url(forResource: name.rawValue, withExtension: "json")!)
@@ -50,7 +66,7 @@ open class Sprite: SKNode {
             ]
         }
 
-        let offsetY = (jsonObject["offset_y"] as? CGFloat ?? 0.0) / 4.0
+        let offsetY = (jsonObject["offset_y"] as? CGFloat ?? 0.0) + ((height - Map.tileSize) / 2.0)
 
         let image = UIImage(named: id, in: bundle, compatibleWith: nil)!
         let texture = SKTexture(image: image)
@@ -64,19 +80,22 @@ open class Sprite: SKNode {
         )
 
         spriteNode = SKSpriteNode(texture: nil, color: UIColor.clear, size: CGSize(width: width, height: height))
-
-        if withShadow {
-            shadow = Sprite(.shadow16, withShadow: false, physics: false, spark: false)
-            shadow?.animate(.first)
+        spriteNode.zPosition = 1
+        
+        if shadow {
+            shadowSprite = Sprite(.shadow16, shadow: false, physics: false)
+            shadowSprite?.animate(.first)
+            shadowSprite?.zPosition = 0
         } else {
-            shadow = nil
+            shadowSprite = nil
         }
 
-        if spark {
-            sparks = Sprite(.sparks, withShadow: false, physics: false, spark: false)
-            sparks?.animate(.first)
+        if sparks {
+            sparksSprite = Sprite(.sparks, shadow: false, physics: false)
+            sparksSprite?.animate(.first)
+            sparksSprite?.zPosition = 3
         } else {
-            sparks = nil
+            sparksSprite = nil
         }
 
         super.init()
@@ -89,29 +108,13 @@ open class Sprite: SKNode {
             physicsBody?.allowsRotation = false
         }
 
-        if let shadow = shadow {
-            addChild(shadow)
+        if let shadowSprite = shadowSprite {
+            addChild(shadowSprite)
         }
         addChild(spriteNode)
-        if let sparks = sparks {
-            addChild(sparks)
+        if let sparksSprite = sparksSprite {
+            addChild(sparksSprite)
         }
-    }
-
-    public convenience init(_ name: SpriteName, withPhysics: Bool) {
-        self.init(name, withShadow: true, physics: withPhysics, spark: false)
-    }
-
-    public convenience init(_ name: SpriteName, withShadow: Bool) {
-        self.init(name, withShadow: withShadow, physics: true, spark: false)
-    }
-
-    public convenience init(_ name: SpriteName, withSpark: Bool) {
-        self.init(name, withShadow: true, physics: true, spark: withSpark)
-    }
-
-    public convenience init(_ name: SpriteName) {
-        self.init(name, withShadow: true, physics: true, spark: false)
     }
 
     public required init?(coder aDecoder: NSCoder) {
@@ -130,8 +133,7 @@ open class Sprite: SKNode {
             return
         }
         
-        let textures = stride(from: 0.0, to: length, by: 1.0)
-            .map { subTexture(col: $0, row: row) }
+        let textures = subTextures(length: length, row: row)
         
         let animate = SKAction.animate(with: textures, timePerFrame: speed.rawValue)
         let key = "animate"
@@ -139,11 +141,24 @@ open class Sprite: SKNode {
         if forever {
             let forever = SKAction.repeatForever(animate)
             spriteNode.run(forever, withKey: key)
+
+            self.animation = animation
         } else {
-            spriteNode.run(animate, withKey: key)
+            let restore = SKAction.run {
+                self.animate(self.animation)
+            }
+            let sequence = SKAction.sequence([animate, restore])
+            spriteNode.run(sequence, withKey: key)
         }
         
         spriteNode.xScale = animation.xScale
+        
+        weaponSprite?.animate(animation, speed: speed, forever: forever)
+    }
+    
+    func subTextures(length: CGFloat, row: CGFloat) -> [SKTexture] {
+        return stride(from: 0.0, to: length, by: 1.0)
+            .map { subTexture(col: $0, row: row) }
     }
     
     func subTexture(col: CGFloat, row: CGFloat) -> SKTexture {

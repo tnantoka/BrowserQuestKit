@@ -13,8 +13,15 @@ public enum SpriteAnimation: String {
     case walkUp = "walk_up"
     case walkDown = "walk_down"
     case walkLeft = "walk_left"
+    case idleRight = "idle_right"
+    case idleUp = "idle_up"
     case idleDown = "idle_down"
+    case idleLeft = "idle_left"
     case idle = "idle"
+    case atkRight = "atk_right"
+    case atkUp = "atk_up"
+    case atkDown = "atk_down"
+    case atkLeft = "atk_left"
     
     case first = "first"
     
