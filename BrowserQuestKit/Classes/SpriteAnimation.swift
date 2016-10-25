@@ -26,11 +26,6 @@ public enum SpriteAnimation: String {
     case first = "first"
     
     var xScale: CGFloat {
-        switch self {
-        case .walkLeft:
-            return -1
-        default:
-            return 1
-        }
+        return rawValue.hasSuffix("_left") ? -1 : 1
     }
 }

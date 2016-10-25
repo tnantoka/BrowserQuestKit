@@ -22,7 +22,7 @@ open class Sprite: SKNode {
     
     let json: JSON
     
-    let spriteNode: SKSpriteNode
+    public let spriteNode: SKSpriteNode
 
     let shadowSprite: Sprite?
     let sparksSprite: Sprite?
