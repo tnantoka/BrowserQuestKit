@@ -354,6 +354,8 @@
 		9BDA56DC1DB64E380044143E /* graphicpixel-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA56DA1DB64E380044143E /* graphicpixel-webfont.ttf */; };
 		9BDA56DE1DB650500044143E /* FontName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDA56DD1DB650500044143E /* FontName.swift */; };
 		9BDA56E01DB650920044143E /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDA56DF1DB650920044143E /* Label.swift */; };
+		9BDA56E61DC0DF130044143E /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDA56E51DC0DF130044143E /* Achievement.swift */; };
+		9BDA56E81DC0DF1A0044143E /* AchievementName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDA56E71DC0DF1A0044143E /* AchievementName.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -717,6 +719,8 @@
 		9BDA56DA1DB64E380044143E /* graphicpixel-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "graphicpixel-webfont.ttf"; sourceTree = "<group>"; };
 		9BDA56DD1DB650500044143E /* FontName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontName.swift; sourceTree = "<group>"; };
 		9BDA56DF1DB650920044143E /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		9BDA56E51DC0DF130044143E /* Achievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
+		9BDA56E71DC0DF1A0044143E /* AchievementName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementName.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -793,6 +797,8 @@
 				9BDA56A01DB3AF670044143E /* SoundName.swift */,
 				9BDA56DD1DB650500044143E /* FontName.swift */,
 				9BDA56DF1DB650920044143E /* Label.swift */,
+				9BDA56E51DC0DF130044143E /* Achievement.swift */,
+				9BDA56E71DC0DF1A0044143E /* AchievementName.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1625,10 +1631,12 @@
 				9BD933F01DAFBA410027B87B /* Map.swift in Sources */,
 				9BD933F21DB2FCD40027B87B /* BitMask.swift in Sources */,
 				9BDA569F1DB3AF600044143E /* MusicName.swift in Sources */,
+				9BDA56E81DC0DF1A0044143E /* AchievementName.swift in Sources */,
 				9BDA569D1DB3AEA50044143E /* Music.swift in Sources */,
 				9BDA569B1DB3AE8E0044143E /* Sound.swift in Sources */,
 				9BDA56E01DB650920044143E /* Label.swift in Sources */,
 				9BD933EC1DABCCC10027B87B /* SpriteAnimation.swift in Sources */,
+				9BDA56E61DC0DF130044143E /* Achievement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

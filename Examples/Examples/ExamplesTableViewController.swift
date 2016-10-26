@@ -32,6 +32,10 @@ class ExamplesTableViewController: UITableViewController {
             "label": "Getting Started",
             "scene": ReadmeScene.self,
             ],
+        [
+            "label": "Achievements",
+            "scene": AchievementsScene.self,
+            ],
         ]
     
     override func viewDidLoad() {
