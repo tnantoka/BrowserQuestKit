@@ -19,6 +19,7 @@
 		9BDA56E21DB652790044143E /* FontsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDA56E11DB652790044143E /* FontsScene.swift */; };
 		9BDA56E41DB901100044143E /* ReadmeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDA56E31DB901100044143E /* ReadmeScene.swift */; };
 		9BDA56EA1DC0E6720044143E /* AchievementsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDA56E91DC0E6720044143E /* AchievementsScene.swift */; };
+		9BDA56EC1DC1B2180044143E /* AttackScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDA56EB1DC1B2180044143E /* AttackScene.swift */; };
 		FB661343A7CC6CE8CC7E8B3A /* Pods_Examples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD76F7EE7F4A99AE963C54D /* Pods_Examples.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		9BDA56E11DB652790044143E /* FontsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsScene.swift; sourceTree = "<group>"; };
 		9BDA56E31DB901100044143E /* ReadmeScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadmeScene.swift; sourceTree = "<group>"; };
 		9BDA56E91DC0E6720044143E /* AchievementsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsScene.swift; sourceTree = "<group>"; };
+		9BDA56EB1DC1B2180044143E /* AttackScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttackScene.swift; sourceTree = "<group>"; };
 		A527D7E3ED29B87B83FD04DE /* Pods-Examples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Examples.release.xcconfig"; path = "Pods/Target Support Files/Pods-Examples/Pods-Examples.release.xcconfig"; sourceTree = "<group>"; };
 		AFD76F7EE7F4A99AE963C54D /* Pods_Examples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Examples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF1F7F7633376390E0931AF8 /* Pods-Examples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Examples.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Examples/Pods-Examples.debug.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				9BDA56E11DB652790044143E /* FontsScene.swift */,
 				9BDA56E31DB901100044143E /* ReadmeScene.swift */,
 				9BDA56E91DC0E6720044143E /* AchievementsScene.swift */,
+				9BDA56EB1DC1B2180044143E /* AttackScene.swift */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				9BD931771DAA7D900027B87B /* HelloScene.swift in Sources */,
 				9BDA56951DB3211E0044143E /* SpritesScene.swift in Sources */,
 				9BDA56E21DB652790044143E /* FontsScene.swift in Sources */,
+				9BDA56EC1DC1B2180044143E /* AttackScene.swift in Sources */,
 				9BDA56EA1DC0E6720044143E /* AchievementsScene.swift in Sources */,
 				9BD931791DAA7D900027B87B /* GameViewController.swift in Sources */,
 				9BD933F41DB31CFD0027B87B /* ExamplesTableViewController.swift in Sources */,
