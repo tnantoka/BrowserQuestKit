@@ -24,7 +24,7 @@ open class Achievement: SKSpriteNode {
         rect.size.width /= textureWidth
         rect.size.height /= textureHeight
         let texture = SKTexture(rect: rect, in: Achievement.texture)
-        super.init(texture: texture, color: UIColor.clear, size: size)
+        super.init(texture: texture, color: SKColor.clear, size: size)
     }
     
     public required init?(coder aDecoder: NSCoder) {

@@ -12,4 +12,5 @@ public enum AnimationSpeed: TimeInterval {
     case normal = 0.3
     case slow = 0.5
     case fast = 0.1
+    case verySlow = 1.0
 }

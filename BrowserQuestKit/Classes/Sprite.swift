@@ -79,7 +79,8 @@ open class Sprite: SKNode {
             texture: texture
         )
 
-        spriteNode = SKSpriteNode(texture: nil, color: UIColor.clear, size: CGSize(width: width, height: height))
+        spriteNode = SKSpriteNode(texture: nil, color: SKColor.clear, size: CGSize(width: width, height: height))
+        spriteNode.color = SKColor.red
         spriteNode.zPosition = 1
         
         if shadow {
@@ -154,6 +155,31 @@ open class Sprite: SKNode {
         spriteNode.xScale = animation.xScale
         
         weaponSprite?.animate(animation, speed: speed, forever: forever)
+    }
+    
+    public func damage(_ value: Int, force: Bool = false, speed: AnimationSpeed = .verySlow) {
+        let key = "damage"
+
+        guard force || spriteNode.action(forKey: key) == nil else { return }
+        
+        let label = Label(.graphicPixel)
+        label.text = "-\(value)"
+        label.zPosition = 4
+        label.fontSize = 10.0
+        label.fontColor = spriteNode.color
+        label.position.y = Map.tileSize
+        addChild(label)
+        
+        spriteNode.colorBlendFactor = 1.0
+        let colorAction = SKAction.colorize(withColorBlendFactor: 0.0, duration: speed.rawValue)
+        spriteNode.run(colorAction, withKey: key)
+        
+        let fadeOut = SKAction.fadeOut(withDuration: speed.rawValue)
+        let move = SKAction.moveBy(x: 0.0, y: Map.tileSize / 2.0, duration: speed.rawValue)
+        let remove = SKAction.removeFromParent()
+        let group = SKAction.group([fadeOut, move])
+        let sequence = SKAction.sequence([group, remove])
+        label.run(sequence)
     }
     
     func subTextures(length: CGFloat, row: CGFloat) -> [SKTexture] {

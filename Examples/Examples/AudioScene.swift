@@ -23,7 +23,7 @@ class AudioScene: SKScene {
 
         Music.play(.village, forScene: self)
 
-        let ground = SKSpriteNode(color: UIColor.white, size: CGSize(width: size.width, height: 2.0))
+        let ground = SKSpriteNode(color: SKColor.white, size: CGSize(width: size.width, height: 2.0))
         ground.position.x = view.center.x
         ground.position.y = view.center.y - 50.0
         ground.physicsBody = SKPhysicsBody(rectangleOf: ground.size)
