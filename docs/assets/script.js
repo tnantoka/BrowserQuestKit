@@ -3,22 +3,25 @@ $(function() {
     var $map = $(this);
     var $img = $(this).find('img');
 
-    var scale = parseInt($img.prop('src').replace(/[^\d]/g, '')) || 1;
-    var tileSize = 16 * scale;
-    $map.addClass('scale' + scale);
+    $img.on('load', function() {
+      var scale = parseInt($img.prop('src').replace(/[^\d]/g, '')) || 1;
+      var tileSize = 16 * scale;
+      $map.addClass('scale' + scale);
 
-    var width = $img.prop('width');
-    var height = $img.prop('height');
+      var width = $img.prop('width');
+      var height = $img.prop('height');
 
-    $map.width(width);
-    $map.height(height);
+      $map.width(width);
+      $map.height(height);
 
-    var tiles = width / tileSize * height / tileSize;
+      var tiles = width / tileSize * height / tileSize;
 
-    for (var i = 0; i < tiles; i++) {
-      var $tile = $('<span class="tile"><span class="index">' + i + '</span></span>');
-      $img.after($tile);
-    }
+      for (var i = 0; i < tiles; i++) {
+        var $tile = $('<span class="tile"><span class="index">' + i + '</span></span>');
+        $img.after($tile);
+      }
+    });
+    $img.prop('src', 'assets/tilesheet@2x.png');
   });
 });
 
